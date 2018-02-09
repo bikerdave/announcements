@@ -15,4 +15,18 @@ class AnnouncementController extends AbstractController
     {
         throw new NotFoundHttpException();
     }
+
+    /**
+     * @Route("/find/{$company}/{$id}"), name="find")
+     * @param String|Boolean $company
+     * @param String|Boolean $id
+     */
+    public function find($company = false, $id = false)
+    {
+        if (!($company || $id)) {
+
+        } else {
+            throw new NotFoundHttpException();
+        }
+    }
 }
