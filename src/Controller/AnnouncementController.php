@@ -45,8 +45,8 @@ class AnnouncementController extends AbstractController
                 'id' => $announcement_id
             ]);
 
-        if (!$entry) {
-            return $this->redirect('https://www.google.co.uk/');
+        if ($entry) {
+            return $this->redirect($entry->getUrl());
         } else {
             throw new NotFoundHttpException();
         }
