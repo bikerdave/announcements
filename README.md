@@ -1,4 +1,5 @@
 # Announcements system
+In simple terms the goal of this application is to consume news feeds (RNS, press releases, etc.) and post the associated links on Twitter.
 
 ## Setup
 
@@ -20,6 +21,11 @@ Create DB:
 Run migrations:
 ```
 ./bin/console doctrine:migrations:migrate
+```
+
+Seed the database:
+```
+./bin/console doctrine:fixtures:load
 ```
 
 Start the server:
